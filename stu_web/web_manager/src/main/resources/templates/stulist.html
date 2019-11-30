@@ -6,12 +6,14 @@
 </head>
 <body>
     <h1>学生列表</h1>
+    <H2><a href="/stu/toadd">添加新学生</a></H2>
     <table>
         <tr>
             <td>编号</td>
             <td>学生姓名</td>
             <td>年龄</td>
             <td>所属班级</td>
+            <td>操作</td>
         </tr>
 
         <tr th:each="stu : ${stus}">
@@ -19,6 +21,10 @@
             <td th:text="${stu.sname}">学生姓名</td>
             <td th:text="${stu.age}">年龄</td>
             <td th:text="${stu.cls.cname}">所属班级</td>
+            <td>
+                <a th:href="|/stu/delete?id=${stu.id}|">删除</a>
+                <a>修改</a>
+            </td>
         </tr>
     </table>
 </body>

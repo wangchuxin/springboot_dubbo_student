@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org" xmlns="http://www.w3.org/1999/html">
+<head>
+    <meta charset="UTF-8">
+    <title>添加学生</title>
+</head>
+<body>
+<h1>添加学生</h1>
+<form action="/stu/add" method="post">
+    <input type="hidden" name="id">
+    学生姓名：<input type="text" name="sname"></br>
+    年龄：<input type="text" name="age"></br>
+    所属班级：<input type="text" name="cid"></br>
+    <button type="submit">添加</button>
+</form>
+</body>
+</html>

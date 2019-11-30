@@ -25,4 +25,12 @@ public class ClsServiceImpl implements IClsService {
     public Classes queryById(Integer id) {
         return clsMapper.selectById(id);
     }
+
+    @Override
+    public Classes updateNum(Integer cid) {
+        Classes classes = clsMapper.selectById(cid);
+        classes.setCnum(classes.getCnum()+1);
+        clsMapper.updateById(classes);
+        return classes;
+    }
 }

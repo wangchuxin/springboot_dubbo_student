@@ -7,4 +7,7 @@ import java.util.List;
 public interface IStuService {
 
     List<Student> list();
+    void addStu(Student student);
+
+    void deleteStu(Integer id);
 }

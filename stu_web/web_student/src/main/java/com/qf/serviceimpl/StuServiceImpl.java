@@ -31,4 +31,14 @@ public class StuServiceImpl implements IStuService {
         }
         return students;
     }
+
+    @Override
+    public void addStu(Student student) {
+        stuMapper.insert(student);
+    }
+
+    @Override
+    public void deleteStu(Integer id) {
+        stuMapper.deleteById(id);
+    }
 }
