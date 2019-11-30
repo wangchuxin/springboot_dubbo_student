@@ -10,4 +10,8 @@ public interface IStuService {
     void addStu(Student student);
 
     void deleteStu(Integer id);
+
+    void updateStu(Student student);
+
+    Student queryById(Integer id);
 }

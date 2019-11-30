@@ -41,4 +41,15 @@ public class StuServiceImpl implements IStuService {
     public void deleteStu(Integer id) {
         stuMapper.deleteById(id);
     }
+
+    @Override
+    public void updateStu(Student student) {
+        stuMapper.updateById(student);
+    }
+
+    @Override
+    public Student queryById(Integer id) {
+        Student student=stuMapper.selectById(id);
+        return student;
+    }
 }

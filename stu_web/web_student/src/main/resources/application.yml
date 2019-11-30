@@ -3,11 +3,11 @@ dubbo:
     name: stu-service
   registry:
     address: zookeeper://192.168.74.188:2181
-  protocol:
-    #×Ô¶¯²éÕÒÒ»¸ö¿ÉÓÃµÄ¶Ë¿Ú£¬Ä¬ÈÏÊÇ20880
-    port: -1
+    protocol:
+      #è‡ªåŠ¨æŸ¥æ‰¾ä¸€ä¸ªå¯ç”¨çš„ç«¯å£ï¼Œé»˜è®¤ä¸º20880
+      port: -1
     consumer:
-      #Ê×´ÎÆô¶¯²»¼ì²éÌá¹©ÕßÊÇ·ñ´æÔÚ
+      #é¦–æ¬¡å¯åŠ¨ä¸æ£€æŸ¥æä¾›è€…æ˜¯å¦å­˜åœ¨
       check: false
 spring:
   datasource:

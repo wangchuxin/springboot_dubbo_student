@@ -5,7 +5,7 @@
     <title>Title</title>
 </head>
 <body>
-    <h1>学生列表</h1>
+    <h1>学生列表</h1><h4><a href="/stu/getindex">主页</a></h4>
     <H2><a href="/stu/toadd">添加新学生</a></H2>
     <table>
         <tr>
@@ -23,7 +23,7 @@
             <td th:text="${stu.cls.cname}">所属班级</td>
             <td>
                 <a th:href="|/stu/delete?id=${stu.id}|">删除</a>
-                <a>修改</a>
+                <a th:href="|/stu/toupdate?id=${stu.id}|">修改</a>
             </td>
         </tr>
     </table>

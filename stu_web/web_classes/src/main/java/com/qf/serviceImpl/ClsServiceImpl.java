@@ -33,4 +33,12 @@ public class ClsServiceImpl implements IClsService {
         clsMapper.updateById(classes);
         return classes;
     }
+
+    @Override
+    public Classes delnum(Integer cid) {
+        Classes classes = clsMapper.selectById(cid);
+        classes.setCnum(classes.getCnum()-1);
+        clsMapper.updateById(classes);
+        return classes;
+    }
 }

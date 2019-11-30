@@ -6,16 +6,22 @@
 </head>
 <body>
 <h1>班级列表</h1>
+<a href="/stu/getindex">主页</a></h4>
 <table>
     <tr>
         <td>id</td>
         <td>班级名称</td>
         <td>班级总人数</td>
+        <td>操作</td>
     </tr>
     <tr th:each="cls : ${clss}">
         <td th:text="${cls.id}">id</td>
         <td th:text="${cls.cname}">班级名称</td>
         <td th:text="${cls.cnum}">班级总人数</td>
+        <td>
+            <a th:href="|/cls/delete?id=${cls.id}|">删除</a>
+            <a th:href="|/cls/toupdate?id=${cls.id}|">修改</a>
+        </td>
     </tr>
 </table>
 </body>

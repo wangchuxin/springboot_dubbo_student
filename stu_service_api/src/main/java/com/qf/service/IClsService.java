@@ -10,5 +10,7 @@ public interface IClsService {
 
     Classes queryById(Integer id);
 
-    Classes updateNum(Integer cid);//班级人数自动添加
+    Classes updateNum(Integer cid);//添加学生时班级人数自动添加
+
+    Classes delnum(Integer cid);//删除学生时班级人数自动减少
 }
